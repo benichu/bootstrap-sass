@@ -60,14 +60,12 @@
         height: this.$element[0].offsetHeight
       })
 
-      var $parent = this.$menu.closest('.typeahead');
-
       this.$menu
         .insertAfter(this.$element)
         .css({
           display : 'block'
-        , top: $parent.offset().top + $parent.outerHeight()
-        , left: $parent.offset().left
+        , top: pos.top + pos.height
+        , left: pos.left
         , position: 'fixed'
         })
         .show()
