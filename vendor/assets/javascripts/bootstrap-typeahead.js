@@ -60,12 +60,14 @@
         height: this.$element[0].offsetHeight
       })
 
+      var $parent = this.$menu.closest('.twitter-typeahead');
+
       this.$menu
         .insertAfter(this.$element)
         .css({
           display : 'block'
-        , top: pos.top + pos.height
-        , left: pos.left
+        , top: $parent.offset().top + $parent.outerHeight()
+        , left: $parent.offset().left
         , position: 'fixed'
         })
         .show()
