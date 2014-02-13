@@ -63,8 +63,10 @@
       this.$menu
         .insertAfter(this.$element)
         .css({
-          top: pos.top + pos.height
+          display : 'block'
+        , top: pos.top + pos.height
         , left: pos.left
+        , position: 'fixed'
         })
         .show()
 
